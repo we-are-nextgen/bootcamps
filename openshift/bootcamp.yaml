@@ -1,7 +1,7 @@
 name: "NextGen openshift Bootcamp"
 version: "1.0"
 description: "Cohort-based, intensive OpenShift/cloud-native bootcamp."
-duration_weeks: 3
+durationWeeks: 3
 audience: 
   - "Platform Engineers"
   - "Application Developers"
@@ -155,4 +155,4 @@ layers:
       format: "5-minute video or live presentation"
     - id: X4
       name: "Completion Badge"
-      badge_id: "panache-bootcamp-level-1"
+      badge: "panache-bootcamp-level-1"
