@@ -25,7 +25,6 @@ layers:
     - id: O2
       name: "Baseline Assessment"
       type: "quiz"
-      questions: 15
       linkedLabs:
         - "openshift-sandbox-orientation"
         - "oc-cli-101"
