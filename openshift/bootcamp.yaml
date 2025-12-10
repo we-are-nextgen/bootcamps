@@ -77,7 +77,7 @@ layers:
         lab: "tekton-build-pipeline"
         quiz: "c4-quiz"
         discussion: "pipeline-patterns"
-      linked_labs:
+      linkedLabs:
         - "tekton-intro-lab"
         - "tekton-pipeline-lab"
 
@@ -89,7 +89,7 @@ layers:
         lab: "argocd-environment-sync"
         quiz: "c5-quiz"
         discussion: "gitops-advantages"
-      linked_labs:
+      linkedLabs:
         - "argocd-intro-lab"
         - "gitops-multi-env-lab"
 
@@ -101,7 +101,7 @@ layers:
         lab: "openshift-observability"
         quiz: "c6-quiz"
         discussion: "troubleshooting-scenarios"
-      linked_labs:
+      linkedLabs:
         - "logging-loki-lab"
         - "prometheus-grafana-lab"
         - "failed-pod-troubleshooting"
@@ -111,7 +111,7 @@ layers:
       name: "Guided Challenge"
       description: "Scenario-based practice with hints"
       scenario: "Fix a failing deployment and expose it"
-      linked_labs:
+      linkedLabs:
         - "failed-pod-troubleshooting"
         - "routes-lab"
 
@@ -119,7 +119,7 @@ layers:
       name: "Unguided Challenge"
       description: "Outcome-based task: learners choose approach"
       scenario: "Deploy → Configure → Expose → Add liveness probe"
-      linked_labs:
+      linkedLabs:
         - "deploy-first-app"
         - "configmaps-secrets-lab"
         - "health-checks-lab"
@@ -127,7 +127,7 @@ layers:
     - id: P3
       name: "Weekly Team Challenge"
       description: "Group exercise implementing multi-env GitOps"
-      linked_labs:
+      linkedLabs:
         - "gitops-multi-env-lab"
 
   capstone:
@@ -144,7 +144,7 @@ layers:
         - "Build CI pipeline"
         - "Enable GitOps"
         - "Add observability"
-      linked_labs:
+      linkedLabs:
         - "deploy-first-app"
         - "tekton-pipeline-lab"
         - "argocd-intro-lab"
