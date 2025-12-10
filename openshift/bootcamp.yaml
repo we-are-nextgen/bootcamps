@@ -1,17 +1,15 @@
-bootcamp:
-  name: "NextGen openshift Bootcamp"
-  version: "1.0"
-  description: "Cohort-based, intensive OpenShift/cloud-native bootcamp."
-  duration_weeks: 3
-  audience: 
-    - "Platform Engineers"
-    - "Application Developers"
-    - "Cloud/DevOps Practitioners"
-  outcomes:
-    - "Deploy, manage, and troubleshoot cloud-native apps on OpenShift"
-    - "Understand CI/CD, GitOps, observability"
-    - "Deliver a full end-to-end capstone scenario"
-
+name: "NextGen openshift Bootcamp"
+version: "1.0"
+description: "Cohort-based, intensive OpenShift/cloud-native bootcamp."
+duration_weeks: 3
+audience: 
+  - "Platform Engineers"
+  - "Application Developers"
+  - "Cloud/DevOps Practitioners"
+outcomes:
+  - "Deploy, manage, and troubleshoot cloud-native apps on OpenShift"
+  - "Understand CI/CD, GitOps, observability"
+  - "Deliver a full end-to-end capstone scenario"
 layers:
   orientation:
     - id: O1
