@@ -2,6 +2,7 @@ name: "NextGen openshift Bootcamp"
 version: "1.0"
 description: "Cohort-based, intensive OpenShift/cloud-native bootcamp."
 durationWeeks: 3
+badgeRuleValue: '*'   # all the rules apply to all bootcamps
 audience: 
   - "Platform Engineers"
   - "Application Developers"
