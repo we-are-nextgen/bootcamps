@@ -17,7 +17,8 @@ outcomes:
 #                             LAYERS
 ##########################################################################  
 layers:
-  orientation:
+  - name: orientation
+    type: orientation
     - id: O1
       name: "Kickoff Session"
       type: "live"
@@ -35,7 +36,8 @@ layers:
         - "openshift-sandbox-orientation"
         - "oc-cli-101"
 
-  core_modules:
+  - name: core_modules
+    type: core_modules  
     - id: C1
       name: "Containers & Kubernetes Fundamentals"
       components:
@@ -107,7 +109,8 @@ layers:
         - "prometheus-grafana-lab"
         - "failed-pod-troubleshooting"
 
-  practice_modules:
+  - name: practice_modules
+    type: practice_modules    
     - id: P1
       name: "Guided Challenge"
       description: "Scenario-based practice with hints"
@@ -129,7 +132,8 @@ layers:
       linkedLabs:
         - "gitops-multi-env-lab"
 
-  capstone:
+  - name: capstone
+    type: capstone    
     - id: X1
       name: "Capstone Design"
       deliverables:
