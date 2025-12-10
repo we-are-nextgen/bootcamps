@@ -19,17 +19,18 @@ outcomes:
 layers:
   - name: orientation
     type: orientation
-    - id: O1
-      name: "Kickoff Session"
-      type: "live"
-      objectives:
-        - "Set expectations"
-        - "Introduce tools and labs"
-        - "Explain cohort structure"
-      resources:
-        - "slides/welcome.pdf"
-        - "channel:discussion"
-    - id: O2
+    modules:
+      - id: O1
+        name: "Kickoff Session"
+        type: "live"
+        objectives:
+          - "Set expectations"
+          - "Introduce tools and labs"
+          - "Explain cohort structure"
+        resources:
+          - "slides/welcome.pdf"
+          - "channel:discussion"
+      - id: O2
       name: "Baseline Assessment"
       type: "quiz"
       linkedLabs:
@@ -38,65 +39,66 @@ layers:
 
   - name: core_modules
     type: core_modules  
-    - id: C1
-      name: "Containers & Kubernetes Fundamentals"
-      components:
-        primer: "videos/k8s-basics.mp4"
-        demo: "demos/podman-intro"
-        lab: "podman-basics-lab"
-        quiz: "c1-quiz"
-        discussion: "post-your-container-image"
-      linkedLabs:
-        - "podman-basics-lab"
-        - "k8s-objects-101"
-    - id: C2
-      name: "OpenShift Fundamentals"
-      components:
-        primer: "videos/openshift-overview.mp4"
-        demo: "demos/oc-cli-demo"
-        lab: "openshift-console-and-cli"
-        quiz: "c2-quiz"
-        discussion: "create-your-first-project"
-      linkedLabs:
-        - "openshift-console-basics"
-        - "oc-cli-operations"
-        - "deploy-first-app"
-    - id: C3
-      name: "Deployment Patterns"
-      components:
-        primer: "videos/routes-and-services.mp4"
-        demo: "demos/deployments-demo"
-        lab: "routes-services-scaling"
-        quiz: "c3-quiz"
-        discussion: "probe-and-scaling-patterns"
-      linkedLabs:
-        - "routes-lab"
-        - "services-basics"
-        - "configmaps-secrets-lab"
-        - "health-checks-lab"
-    - id: C4
-      name: "CI/CD with Tekton"
-      components:
-        primer: "videos/tekton-basics.mp4"
-        demo: "demos/tekton-pipeline-demo"
-        lab: "tekton-build-pipeline"
-        quiz: "c4-quiz"
-        discussion: "pipeline-patterns"
-      linkedLabs:
-        - "tekton-intro-lab"
-        - "tekton-pipeline-lab"
-    - id: C5
-      name: "GitOps with ArgoCD"
-      components:
-        primer: "videos/gitops-overview.mp4"
-        demo: "demos/argocd-sync-demo"
-        lab: "argocd-environment-sync"
-        quiz: "c5-quiz"
-        discussion: "gitops-advantages"
-      linkedLabs:
-        - "argocd-intro-lab"
-        - "gitops-multi-env-lab"
-    - id: C6
+    modules:    
+      - id: C1
+        name: "Containers & Kubernetes Fundamentals"
+        components:
+          primer: "videos/k8s-basics.mp4"
+          demo: "demos/podman-intro"
+          lab: "podman-basics-lab"
+          quiz: "c1-quiz"
+          discussion: "post-your-container-image"
+        linkedLabs:
+          - "podman-basics-lab"
+          - "k8s-objects-101"
+      - id: C2
+        name: "OpenShift Fundamentals"
+        components:
+          primer: "videos/openshift-overview.mp4"
+          demo: "demos/oc-cli-demo"
+          lab: "openshift-console-and-cli"
+          quiz: "c2-quiz"
+          discussion: "create-your-first-project"
+        linkedLabs:
+          - "openshift-console-basics"
+          - "oc-cli-operations"
+          - "deploy-first-app"
+      - id: C3
+        name: "Deployment Patterns"
+        components:
+          primer: "videos/routes-and-services.mp4"
+          demo: "demos/deployments-demo"
+          lab: "routes-services-scaling"
+          quiz: "c3-quiz"
+          discussion: "probe-and-scaling-patterns"
+        linkedLabs:
+          - "routes-lab"
+          - "services-basics"
+          - "configmaps-secrets-lab"
+          - "health-checks-lab"
+      - id: C4
+        name: "CI/CD with Tekton"
+        components:
+          primer: "videos/tekton-basics.mp4"
+          demo: "demos/tekton-pipeline-demo"
+          lab: "tekton-build-pipeline"
+          quiz: "c4-quiz"
+          discussion: "pipeline-patterns"
+        linkedLabs:
+          - "tekton-intro-lab"
+          - "tekton-pipeline-lab"
+      - id: C5
+        name: "GitOps with ArgoCD"
+        components:
+          primer: "videos/gitops-overview.mp4"
+          demo: "demos/argocd-sync-demo"
+          lab: "argocd-environment-sync"
+          quiz: "c5-quiz"
+          discussion: "gitops-advantages"
+        linkedLabs:
+          - "argocd-intro-lab"
+          - "gitops-multi-env-lab"
+      - id: C6
       name: "Observability & Troubleshooting"
       components:
         primer: "videos/openshift-monitoring.mp4"
@@ -110,51 +112,53 @@ layers:
         - "failed-pod-troubleshooting"
 
   - name: practice_modules
-    type: practice_modules    
-    - id: P1
-      name: "Guided Challenge"
-      description: "Scenario-based practice with hints"
-      scenario: "Fix a failing deployment and expose it"
-      linkedLabs:
-        - "failed-pod-troubleshooting"
-        - "routes-lab"
-    - id: P2
-      name: "Unguided Challenge"
-      description: "Outcome-based task: learners choose approach"
-      scenario: "Deploy → Configure → Expose → Add liveness probe"
-      linkedLabs:
-        - "deploy-first-app"
-        - "configmaps-secrets-lab"
-        - "health-checks-lab"
-    - id: P3
+    type: practice_modules 
+    modules:       
+      - id: P1
+        name: "Guided Challenge"
+        description: "Scenario-based practice with hints"
+        scenario: "Fix a failing deployment and expose it"
+        linkedLabs:
+          - "failed-pod-troubleshooting"
+          - "routes-lab"
+      - id: P2
+        name: "Unguided Challenge"
+        description: "Outcome-based task: learners choose approach"
+        scenario: "Deploy → Configure → Expose → Add liveness probe"
+        linkedLabs:
+          - "deploy-first-app"
+          - "configmaps-secrets-lab"
+          - "health-checks-lab"
+      - id: P3
       name: "Weekly Team Challenge"
       description: "Group exercise implementing multi-env GitOps"
       linkedLabs:
         - "gitops-multi-env-lab"
 
   - name: capstone
-    type: capstone    
-    - id: X1
-      name: "Capstone Design"
-      deliverables:
-        - "architecture-diagram"
-        - "deployment-plan"
-    - id: X2
-      name: "Capstone Build"
-      tasks:
-        - "Deploy app"
-        - "Configure runtime parameters"
-        - "Build CI pipeline"
-        - "Enable GitOps"
-        - "Add observability"
-      linkedLabs:
-        - "deploy-first-app"
-        - "tekton-pipeline-lab"
-        - "argocd-intro-lab"
-        - "logging-loki-lab"
-    - id: X3
-      name: "Capstone Showcase"
-      format: "5-minute video or live presentation"
-    - id: X4
+    type: capstone  
+    modules:      
+      - id: X1
+        name: "Capstone Design"
+        deliverables:
+          - "architecture-diagram"
+          - "deployment-plan"
+      - id: X2
+        name: "Capstone Build"
+        tasks:
+          - "Deploy app"
+          - "Configure runtime parameters"
+          - "Build CI pipeline"
+          - "Enable GitOps"
+          - "Add observability"
+        linkedLabs:
+          - "deploy-first-app"
+          - "tekton-pipeline-lab"
+          - "argocd-intro-lab"
+          - "logging-loki-lab"
+      - id: X3
+        name: "Capstone Showcase"
+        format: "5-minute video or live presentation"
+      - id: X4
       name: "Completion Badge"
       badge: "panache-bootcamp-level-1"
