@@ -26,7 +26,7 @@ layers:
       name: "Baseline Assessment"
       type: "quiz"
       questions: 15
-      linked_labs:
+      linkedLabs:
         - "openshift-sandbox-orientation"
         - "oc-cli-101"
 
@@ -39,7 +39,7 @@ layers:
         lab: "podman-basics-lab"
         quiz: "c1-quiz"
         discussion: "post-your-container-image"
-      linked_labs:
+      linkedLabs:
         - "podman-basics-lab"
         - "k8s-objects-101"
 
@@ -51,7 +51,7 @@ layers:
         lab: "openshift-console-and-cli"
         quiz: "c2-quiz"
         discussion: "create-your-first-project"
-      linked_labs:
+      linkedLabs:
         - "openshift-console-basics"
         - "oc-cli-operations"
         - "deploy-first-app"
@@ -64,7 +64,7 @@ layers:
         lab: "routes-services-scaling"
         quiz: "c3-quiz"
         discussion: "probe-and-scaling-patterns"
-      linked_labs:
+      linkedLabs:
         - "routes-lab"
         - "services-basics"
         - "configmaps-secrets-lab"
