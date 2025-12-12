@@ -1,0 +1,179 @@
+name: "NextGen Quarkus Bootcamp"
+version: "1.0"
+description: "Cohort-based, intensive Quarkus/cloud-native development bootcamp."
+durationWeeks: 3
+difficultyLevel: INTERMEDIATE
+rewardPoints: 25
+badgeRuleValue: "*"
+
+audience:
+  - "Java Developers"
+  - "Backend Engineers"
+  - "Cloud/DevOps Practitioners"
+
+outcomes:
+  - "Build high-performance cloud-native apps using Quarkus"
+  - "Use Panache ORM for frictionless persistence"
+  - "Develop reactive applications using Mutiny"
+  - "Build and deploy Quarkus services to Kubernetes/OpenShift"
+  - "Deliver a full end-to-end Quarkus microservice as a capstone"
+
+layers:
+  - name: orientation
+    type: orientation
+    modules:
+      - id: O1
+        name: "Kickoff Session"
+        type: "live"
+        objectives:
+          - "Set expectations"
+          - "Introduce tools, IDE setup, and labs"
+          - "Explain cohort structure"
+        resources:
+          - "slides/quarkus-welcome.pdf"
+          - "channel:discussion"
+
+      - id: O2
+        name: "Baseline Assessment"
+        type: "quiz"
+        linkedLabs:
+          - "java-basics-check"
+          - "quarkus-hello-world-lab"
+
+  - name: core_modules
+    type: core_modules
+    modules:
+      - id: C1
+        name: "Quarkus Fundamentals"
+        components:
+          primer: "videos/quarkus-intro.mp4"
+          demo: "demos/quarkus-devmode-demo"
+          lab: "quarkus-getting-started-lab"
+          quiz: "c1-quiz"
+          discussion: "why-quarkus-fast"
+        linkedLabs:
+          - "quarkus-getting-started-lab"
+          - "devmode-live-reload-lab"
+
+      - id: C2
+        name: "RESTEasy Reactive & CDI"
+        components:
+          primer: "videos/resteasy-reactive-overview.mp4"
+          demo: "demos/resteasy-reactive-demo"
+          lab: "rest-api-quarkus-lab"
+          quiz: "c2-quiz"
+          discussion: "rest-patterns"
+        linkedLabs:
+          - "resteasy-reactive-basics"
+          - "cdi-dependency-injection-lab"
+          - "jsonb-jackson-mapping-lab"
+
+      - id: C3
+        name: "Data & Persistence with Panache"
+        components:
+          primer: "videos/panache-orm.mp4"
+          demo: "demos/panache-crud-demo"
+          lab: "panache-repository-lab"
+          quiz: "c3-quiz"
+          discussion: "entity-vs-repository"
+        linkedLabs:
+          - "panache-entity-lab"
+          - "panache-repository-lab"
+          - "hibernate-orm-quarkus-lab"
+          - "database-config-lab"
+
+      - id: C4
+        name: "Reactive Programming with Mutiny"
+        components:
+          primer: "videos/mutiny-basics.mp4"
+          demo: "demos/mutiny-reactive-demo"
+          lab: "mutiny-reactive-rest-lab"
+          quiz: "c4-quiz"
+          discussion: "imperative-vs-reactive"
+        linkedLabs:
+          - "mutiny-uni-multi-lab"
+          - "reactive-messaging-kafka-lab"
+
+      - id: C5
+        name: "Native Builds with GraalVM"
+        components:
+          primer: "videos/graalvm-native.mp4"
+          demo: "demos/native-build-demo"
+          lab: "quarkus-native-build-lab"
+          quiz: "c5-quiz"
+          discussion: "native-image-optimizations"
+        linkedLabs:
+          - "native-image-basics"
+          - "native-build-optimization-lab"
+
+      - id: C6
+        name: "Deploying Quarkus to Kubernetes/OpenShift"
+        components:
+          primer: "videos/quarkus-openshift-deploy.mp4"
+          demo: "demos/k8s-deploy-demo"
+          lab: "quarkus-kubernetes-deployment-lab"
+          quiz: "c6-quiz"
+          discussion: "cloud-native-deployment"
+        linkedLabs:
+          - "containerize-quarkus-app"
+          - "openshift-deploy-quarkus"
+          - "configmaps-secrets-quarkus-lab"
+          - "health-checks-quarkus-lab"
+
+  - name: practice_modules
+    type: practice_modules
+    modules:
+      - id: P1
+        name: "Guided Challenge"
+        description: "Scenario-based practice with hints"
+        scenario: "Fix a failing REST API endpoint and optimize startup time"
+        linkedLabs:
+          - "resteasy-reactive-basics"
+          - "native-image-basics"
+
+      - id: P2
+        name: "Unguided Challenge"
+        description: "Outcome-based task: learners choose approach"
+        scenario: "Build → Persist → Expose → Optimize"
+        linkedLabs:
+          - "panache-repository-lab"
+          - "mutiny-uni-multi-lab"
+          - "quarkus-native-build-lab"
+
+      - id: P3
+        name: "Weekly Team Challenge"
+        description: "Group exercise implementing reactive microservice with a database"
+        linkedLabs:
+          - "reactive-messaging-kafka-lab"
+
+  - name: capstone
+    type: capstone
+    modules:
+      - id: X1
+        name: "Capstone Design"
+        deliverables:
+          - "architecture-diagram"
+          - "api-spec"
+          - "database-schema"
+
+      - id: X2
+        name: "Capstone Build"
+        tasks:
+          - "Build a Quarkus REST API"
+          - "Implement Panache persistence"
+          - "Add reactive features"
+          - "Create a native image"
+          - "Deploy to OpenShift"
+        linkedLabs:
+          - "rest-api-quarkus-lab"
+          - "panache-repository-lab"
+          - "quarkus-native-build-lab"
+          - "openshift-deploy-quarkus"
+
+      - id: X3
+        name: "Capstone Showcase"
+        format: "5-minute video or live presentation"
+
+      - id: X4
+        name: "Completion Badge"
+        badge: "quarkus-bootcamp-level-1"

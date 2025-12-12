@@ -1,0 +1,181 @@
+name: "NextGen Next.js & React Bootcamp"
+version: "1.0"
+description: "Cohort-based, intensive React and Next.js cloud-native frontend development bootcamp."
+durationWeeks: 3
+difficultyLevel: INTERMEDIATE
+rewardPoints: 25
+badgeRuleValue: "*"
+
+audience:
+  - "Frontend Developers"
+  - "Full-Stack Engineers"
+  - "Cloud/Serverless Developers"
+
+outcomes:
+  - "Build modern React applications using functional components and hooks"
+  - "Develop full-stack applications with Next.js App Router"
+  - "Integrate APIs, authentication, and server actions"
+  - "Deploy high-performance Next.js apps to cloud platforms"
+  - "Deliver an end-to-end full-stack capstone project"
+
+layers:
+  - name: orientation
+    type: orientation
+    modules:
+      - id: O1
+        name: "Kickoff Session"
+        type: "live"
+        objectives:
+          - "Set expectations"
+          - "Introduce tools, IDE setup, and labs"
+          - "Explain cohort structure"
+        resources:
+          - "slides/nextjs-welcome.pdf"
+          - "channel:discussion"
+
+      - id: O2
+        name: "Baseline Assessment"
+        type: "quiz"
+        linkedLabs:
+          - "javascript-baseline-check"
+          - "react-quickstart-lab"
+
+  - name: core_modules
+    type: core_modules
+    modules:
+      - id: C1
+        name: "React Core Fundamentals"
+        components:
+          primer: "videos/react-fundamentals.mp4"
+          demo: "demos/react-hooks-demo"
+          lab: "react-components-hooks-lab"
+          quiz: "c1-quiz"
+          discussion: "state-management-patterns"
+        linkedLabs:
+          - "react-components-lab"
+          - "react-hooks-lab"
+
+      - id: C2
+        name: "Next.js App Router"
+        components:
+          primer: "videos/nextjs-app-router.mp4"
+          demo: "demos/app-router-demo"
+          lab: "nextjs-routing-lab"
+          quiz: "c2-quiz"
+          discussion: "routing-patterns"
+        linkedLabs:
+          - "nextjs-directory-structure-lab"
+          - "nextjs-dynamic-routes-lab"
+          - "nextjs-layouts-pages-lab"
+
+      - id: C3
+        name: "Server Components & Data Fetching"
+        components:
+          primer: "videos/nextjs-server-components.mp4"
+          demo: "demos/server-components-demo"
+          lab: "nextjs-data-fetching-lab"
+          quiz: "c3-quiz"
+          discussion: "server-vs-client-boundaries"
+        linkedLabs:
+          - "server-components-lab"
+          - "fetching-react-query-lab"
+          - "nextjs-cache-behaviors-lab"
+
+      - id: C4
+        name: "State Management"
+        components:
+          primer: "videos/react-context-state.mp4"
+          demo: "demos/zustand-state-demo"
+          lab: "state-management-lab"
+          quiz: "c4-quiz"
+          discussion: "global-state-patterns"
+        linkedLabs:
+          - "context-api-lab"
+          - "zustand-store-lab"
+          - "redux-toolkit-lab"
+
+      - id: C5
+        name: "Authentication & API Integration"
+        components:
+          primer: "videos/next-auth-overview.mp4"
+          demo: "demos/api-routes-demo"
+          lab: "nextjs-auth-api-lab"
+          quiz: "c5-quiz"
+          discussion: "auth-strategies"
+        linkedLabs:
+          - "next-auth-basics-lab"
+          - "api-routes-lab"
+          - "server-actions-lab"
+
+      - id: C6
+        name: "Performance & Optimization"
+        components:
+          primer: "videos/nextjs-performance.mp4"
+          demo: "demos/image-optimization-demo"
+          lab: "nextjs-performance-lab"
+          quiz: "c6-quiz"
+          discussion: "lighthouse-and-profiling"
+        linkedLabs:
+          - "nextjs-image-optimization-lab"
+          - "lazy-loading-lab"
+          - "bundle-analysis-lab"
+
+  - name: practice_modules
+    type: practice_modules
+    modules:
+      - id: P1
+        name: "Guided Challenge"
+        description: "Scenario-based practice with hints"
+        scenario: "Fix broken routing and optimize a slow page"
+        linkedLabs:
+          - "nextjs-dynamic-routes-lab"
+          - "nextjs-performance-lab"
+
+      - id: P2
+        name: "Unguided Challenge"
+        description: "Outcome-based task: learners choose approach"
+        scenario: "Build → Fetch → Authenticate → Optimize"
+        linkedLabs:
+          - "server-components-lab"
+          - "next-auth-basics-lab"
+          - "lazy-loading-lab"
+
+      - id: P3
+        name: "Weekly Team Challenge"
+        description: "Group exercise building a multi-page dashboard"
+        linkedLabs:
+          - "react-components-lab"
+          - "nextjs-data-fetching-lab"
+
+  - name: capstone
+    type: capstone
+    modules:
+      - id: X1
+        name: "Capstone Design"
+        deliverables:
+          - "architecture-diagram"
+          - "ui-wireframes"
+          - "data-flow-design"
+
+      - id: X2
+        name: "Capstone Build"
+        tasks:
+          - "Create a Next.js App Router project"
+          - "Develop UI with React components"
+          - "Implement authentication and data fetching"
+          - "Integrate global state management"
+          - "Optimize performance"
+          - "Deploy to cloud"
+        linkedLabs:
+          - "react-components-hooks-lab"
+          - "nextjs-routing-lab"
+          - "nextjs-auth-api-lab"
+          - "nextjs-performance-lab"
+
+      - id: X3
+        name: "Capstone Showcase"
+        format: "5-minute video or live presentation"
+
+      - id: X4
+        name: "Completion Badge"
+        badge: "react-nextjs-bootcamp-level-1"

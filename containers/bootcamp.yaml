@@ -1,0 +1,171 @@
+name: "NextGen Podman & Containers Bootcamp"
+version: "1.0"
+description: "Cohort-based, hands-on bootcamp focused on Podman, container fundamentals, and secure image lifecycle."
+durationWeeks: 2
+difficultyLevel: BEGINNER
+rewardPoints: 20
+badgeRuleValue: "*"
+
+audience:
+  - "Platform Engineers"
+  - "Application Developers"
+  - "DevOps/Cloud Engineers"
+  - "Infrastructure Automation Engineers"
+
+outcomes:
+  - "Understand containers, OCI images, and Podman fundamentals"
+  - "Build, run, and troubleshoot containers using Podman"
+  - "Work with local and remote registries"
+  - "Use Podman Compose for multi-container workflows"
+  - "Apply container security best practices"
+
+layers:
+
+#########################################################################
+# 1. ORIENTATION
+#########################################################################
+  - name: orientation
+    type: orientation
+    modules:
+      - id: O1
+        name: "Kickoff Session"
+        type: "live"
+        objectives:
+          - "Bootcamp overview and expectations"
+          - "Introduction to Podman ecosystem"
+          - "Containers vs VMs"
+        resources:
+          - "slides/podman-welcome.pdf"
+          - "channel:intro-discussion"
+
+      - id: O2
+        name: "Baseline Assessment"
+        type: "quiz"
+        linkedLabs:
+          - "containers-basics-quiz"
+          - "linux-cli-quickcheck"
+
+#########################################################################
+# 2. CORE MODULES
+#########################################################################
+  - name: core_modules
+    type: core_modules
+    modules:
+
+      - id: C1
+        name: "Container & Image Fundamentals"
+        components:
+          primer: "videos/containers-fundamentals.mp4"
+          demo: "demos/podman-intro"
+          lab: "podman-basics-lab"
+          quiz: "c1-quiz"
+          discussion: "container-use-cases"
+        linkedLabs:
+          - "podman-basics-lab"
+          - "oci-image-structure-lab"
+
+      - id: C2
+        name: "Building OCI Images with Podman"
+        components:
+          primer: "videos/building-images.mp4"
+          demo: "demos/podman-build-demo"
+          lab: "podman-build-containerfile"
+          quiz: "c2-quiz"
+          discussion: "best-practices-containerfiles"
+        linkedLabs:
+          - "containerfile-basics"
+          - "podman-build-lab"
+          - "image-layering-lab"
+
+      - id: C3
+        name: "Podman Networking & Multi-Container Apps"
+        components:
+          primer: "videos/container-networking.mp4"
+          demo: "demos/podman-network-demo"
+          lab: "podman-compose-lab"
+          quiz: "c3-quiz"
+          discussion: "networking-patterns"
+        linkedLabs:
+          - "podman-networking-lab"
+          - "podman-compose-lab"
+
+      - id: C4
+        name: "Working with Registries"
+        components:
+          primer: "videos/registries-overview.mp4"
+          demo: "demos/podman-push-pull-demo"
+          lab: "podman-registries-lab"
+          quiz: "c4-quiz"
+          discussion: "private-registry-security"
+        linkedLabs:
+          - "container-registries-lab"
+          - "podman-push-pull-lab"
+
+      - id: C5
+        name: "Container Security Essentials"
+        components:
+          primer: "videos/container-security.mp4"
+          demo: "demos/podman-seclab-demo"
+          lab: "podman-security-lab"
+          quiz: "c5-quiz"
+          discussion: "image-hardening"
+        linkedLabs:
+          - "image-signing-lab"
+          - "podman-security-lab"
+          - "rootless-containers-lab"
+
+#########################################################################
+# 3. PRACTICE MODULES
+#########################################################################
+  - name: practice_modules
+    type: practice_modules
+    modules:
+      - id: P1
+        name: "Guided Challenge"
+        description: "Build and run a multi-container application using Podman."
+        scenario: "Fix a broken Containerfile and deploy a two-tier demo app."
+        linkedLabs:
+          - "podman-build-lab"
+          - "podman-compose-lab"
+
+      - id: P2
+        name: "Unguided Challenge"
+        description: "End-to-end scenario focusing on image lifecycle and security."
+        scenario: "Build → Secure → Push → Run a production-ready container image."
+        linkedLabs:
+          - "image-signing-lab"
+          - "registries-workflow-lab"
+
+#########################################################################
+# 4. CAPSTONE
+#########################################################################
+  - name: capstone
+    type: capstone
+    modules:
+      - id: X1
+        name: "Capstone Design"
+        deliverables:
+          - "Containerfile design"
+          - "Networking plan"
+          - "Registry push/pull workflow"
+
+      - id: X2
+        name: "Capstone Build"
+        tasks:
+          - "Build custom image"
+          - "Deploy multi-container app"
+          - "Configure rootless execution"
+          - "Push to private registry"
+          - "Scan and secure image"
+        linkedLabs:
+          - "podman-build-lab"
+          - "podman-compose-lab"
+          - "image-signing-lab"
+
+      - id: X3
+        name: "Capstone Showcase"
+        format: "5-minute recorded demo or live session"
+
+      - id: X4
+        name: "Completion Badge"
+        badge: "panache-bootcamp-podman-level-1"

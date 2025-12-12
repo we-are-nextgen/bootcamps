@@ -191,3 +191,11 @@ layers:
       name: "Completion Badge"
       badge_id: "bootcamp-level-1"
 ```
+
+
+
+1 - OpenShift
+2 - Containers and Podman
+3 - Kubernetes
+4 - Quarkus
+5 - NextJS

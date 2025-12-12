@@ -1,0 +1,188 @@
+name: "NextGen Kubernetes Fundamentals Bootcamp"
+version: "1.0"
+description: "Cohort-based, hands-on bootcamp focused on Kubernetes core concepts, API objects, scheduling, networking, and troubleshooting."
+durationWeeks: 3
+difficultyLevel: BEGINNER
+rewardPoints: 30
+badgeRuleValue: "*"
+
+audience:
+  - "Platform Engineers"
+  - "Application Developers"
+  - "Cloud/DevOps Practitioners"
+
+outcomes:
+  - "Understand Kubernetes architecture and API primitives"
+  - "Create and manage workloads using Pods, Deployments, and StatefulSets"
+  - "Implement service discovery, networking, and access control"
+  - "Perform basic scaling, rolling updates, and troubleshooting"
+  - "Deploy multi-tier applications using Kubernetes best practices"
+
+layers:
+
+  ##########################################################################
+  # 1. ORIENTATION
+  ##########################################################################
+  - name: orientation
+    type: orientation
+    modules:
+      - id: O1
+        name: "Kickoff Session"
+        type: "live"
+        objectives:
+          - "Introductions"
+          - "Bootcamp overview and expectations"
+          - "Tools, clusters, and environment setup"
+        resources:
+          - "slides/k8s-welcome.pdf"
+          - "channel:intro"
+      - id: O2
+        name: "Baseline Assessment"
+        type: "quiz"
+        linkedLabs:
+          - "k8s-basics-quiz"
+          - "cli-setup-check"
+
+  ##########################################################################
+  # 2. CORE MODULES
+  ##########################################################################
+  - name: core_modules
+    type: core_modules
+    modules:
+
+      - id: C1
+        name: "Kubernetes Architecture & API Objects"
+        components:
+          primer: "videos/k8s-architecture.mp4"
+          demo: "demos/apigroups-demo"
+          lab: "k8s-architecture-lab"
+          quiz: "c1-quiz"
+          discussion: "k8s-objects-compare"
+        linkedLabs:
+          - "k8s-architecture-lab"
+          - "pods-deployments-lab"
+
+      - id: C2
+        name: "Workload APIs: Pods, Deployments, ReplicaSets"
+        components:
+          primer: "videos/k8s-workloads.mp4"
+          demo: "demos/deployments-demo"
+          lab: "workloads-lab"
+          quiz: "c2-quiz"
+          discussion: "scaling-strategies"
+        linkedLabs:
+          - "workloads-lab"
+          - "scaling-lab"
+
+      - id: C3
+        name: "Services, Networking & DNS"
+        components:
+          primer: "videos/k8s-networking.mp4"
+          demo: "demos/services-dns-demo"
+          lab: "networking-lab"
+          quiz: "c3-quiz"
+          discussion: "services-vs-ingress"
+        linkedLabs:
+          - "networking-lab"
+          - "services-lab"
+          - "ingress-lab"
+
+      - id: C4
+        name: "Config, Secrets & Storage"
+        components:
+          primer: "videos/k8s-config-storage.mp4"
+          demo: "demos/config-secrets-demo"
+          lab: "config-storage-lab"
+          quiz: "c4-quiz"
+          discussion: "data-management-patterns"
+        linkedLabs:
+          - "config-and-secrets-lab"
+          - "persistent-volumes-lab"
+          - "stateful-apps-lab"
+
+      - id: C5
+        name: "Scaling, Rolling Upgrades & Rollbacks"
+        components:
+          primer: "videos/k8s-scaling.mp4"
+          demo: "demos/rolling-update-demo"
+          lab: "scaling-rollouts-lab"
+          quiz: "c5-quiz"
+          discussion: "canary-patterns"
+        linkedLabs:
+          - "scaling-rollouts-lab"
+          - "rollbacks-lab"
+
+      - id: C6
+        name: "Monitoring & Troubleshooting"
+        components:
+          primer: "videos/k8s-troubleshooting.mp4"
+          demo: "demos/k8s-tools-demo"
+          lab: "monitoring-troubleshooting-lab"
+          quiz: "c6-quiz"
+          discussion: "debugging-pod-failures"
+        linkedLabs:
+          - "monitoring-lab"
+          - "troubleshooting-lab"
+
+  ##########################################################################
+  # 3. PRACTICE MODULES
+  ##########################################################################
+  - name: practice_modules
+    type: practice_modules
+    modules:
+      - id: P1
+        name: "Guided Challenge"
+        description: "Fix broken API objects and recover the app"
+        scenario: "Pods are CrashLooping & Services not reachable"
+        linkedLabs:
+          - "troubleshooting-lab"
+          - "networking-lab"
+
+      - id: P2
+        name: "Unguided Challenge"
+        description: "Design a deployment for high-availability"
+        scenario: "Deploy a multi-tier app with scaling"
+        linkedLabs:
+          - "workloads-lab"
+          - "scaling-rollouts-lab"
+          - "services-lab"
+
+      - id: P3
+        name: "Weekly Team Challenge"
+        description: "Group exercise: complete full site deployment"
+        linkedLabs:
+          - "networking-lab"
+          - "config-storage-lab"
+
+  ##########################################################################
+  # 4. CAPSTONE
+  ##########################################################################
+  - name: capstone
+    type: capstone
+    modules:
+      - id: X1
+        name: "Capstone Design"
+        deliverables:
+          - "Architecture diagram"
+          - "Workload & service plan"
+
+      - id: X2
+        name: "Capstone Build"
+        tasks:
+          - "Deploy multi-tier app"
+          - "Configure scaling and health checks"
+          - "Enable service discovery"
+          - "Add config & secrets"
+          - "Submit troubleshooting report"
+        linkedLabs:
+          - "workloads-lab"
+          - "networking-lab"
+          - "config-storage-lab"
+
+      - id: X3
+        name: "Capstone Showcase"
+        format: "5-minute demo or live presentation"
+
+      - id: X4
+        name: "Completion Badge"
+        badge: "panache-bootcamp-k8s-level-1"
