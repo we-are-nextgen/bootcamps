@@ -5,6 +5,7 @@ durationWeeks: 3
 difficultyLevel: INTERMEDIATE
 rewardPoints: 25
 badgeRuleValue: "*"
+expectedStartDate: "02/02/2026"
 
 audience:
   - "Java Developers"
