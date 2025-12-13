@@ -5,7 +5,7 @@ durationWeeks: 3
 difficultyLevel: INTERMEDIATE
 rewardPoints: 25
 badgeRuleValue: "*"
-expectedStartDate: "25/12/2025"
+expectedStartDate: 2025-01-12
 
 audience:
   - "Frontend Developers"

@@ -5,7 +5,7 @@ durationWeeks: 2
 difficultyLevel: BEGINNER
 rewardPoints: 20
 badgeRuleValue: "*"
-expectedStartDate: "20/12/2025"
+expectedStartDate: 2025-12-20
 
 audience:
   - "Platform Engineers"
