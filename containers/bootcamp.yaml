@@ -1,4 +1,4 @@
-name: "NextGen Podman & Containers Bootcamp"
+name: "Podman & Containers"
 version: "1.0"
 description: "Cohort-based, hands-on bootcamp focused on Podman, container fundamentals, and secure image lifecycle."
 durationWeeks: 2

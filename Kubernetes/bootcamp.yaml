@@ -1,4 +1,4 @@
-name: "NextGen Kubernetes Fundamentals Bootcamp"
+name: "Kubernetes Fundamentals"
 version: "1.0"
 description: "Cohort-based, hands-on bootcamp focused on Kubernetes core concepts, API objects, scheduling, networking, and troubleshooting."
 durationWeeks: 3
