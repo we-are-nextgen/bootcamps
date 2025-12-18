@@ -6,6 +6,7 @@ difficultyLevel: INTERMEDIATE
 rewardPoints: 25
 badgeRuleValue: "*"
 expectedStartDate: 2026-01-16
+capaity: 15
 
 audience:
   - "Frontend Developers"
