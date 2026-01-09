@@ -33,6 +33,8 @@ COHORT_PREFIX="Beginners Bootcamp"
 Ezz_EMAIL="ezz@hotmail.com"
 YASSINE_EMAIL="yassine@hotmail.com"
 
+counter=1
+
 # 1️⃣ GET all bootcamps
 bootcamps=$(curl -s "${BASE_URL}/bootcamp")
 
@@ -58,8 +60,9 @@ echo "$bootcamps" | jq -c '.[]' | while read -r bootcamp; do
         continue
     fi
 
-    echo "   ✅ Cohort started: $cohort_id"
 
+    if (( counter < 4 )); then
+    echo "   ✅ Cohort started: $cohort_id"
     # 5️⃣ POST /enroll
     enroll_response=$(curl -s -X POST \
         "${BASE_URL}/bootcamp/${cohort_id}/enroll?email=${EMAIL}")
@@ -72,7 +75,9 @@ echo "$bootcamps" | jq -c '.[]' | while read -r bootcamp; do
         "${BASE_URL}/bootcamp/${cohort_id}/enroll?email=${YASSINE_EMAIL}")
 
     # 6️⃣ Bootcamp progress 
-    
+    fi
+
+    ((counter++))
 
     echo "   🎯 Enrolled in cohort $cohort_id"
     echo
