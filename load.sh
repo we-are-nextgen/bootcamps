@@ -29,7 +29,7 @@ curl http://localhost:8080/import/bootcamp/quarkus
 
 BASE_URL="http://localhost:8080"
 EMAIL="waelibrahim2000@hotmail.com"
-COHORT_PREFIX="Begginers Bootcamp"
+COHORT_PREFIX="Beginners Bootcamp"
 Ezz_EMAIL="ezz@hotmail.com"
 YASSINE_EMAIL="yassine@hotmail.com"
 
