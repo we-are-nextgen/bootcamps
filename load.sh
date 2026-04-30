@@ -23,7 +23,7 @@
 #!/usr/bin/env bash
 
 BASE_URL="http://localhost:8080"
-BASE_URL="https://nextgen-api.smart-nextgen.com"
+#BASE_URL="https://nextgen-api.smart-nextgen.com"
 EMAIL="waelibrahim2000@hotmail.com"
 COHORT_PREFIX="Beginners Bootcamp"
 Ezz_EMAIL="ezz@hotmail.com"
